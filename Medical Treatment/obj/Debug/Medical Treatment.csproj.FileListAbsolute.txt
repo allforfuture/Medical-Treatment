@@ -1,0 +1,146 @@
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Management.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical_Treatment.Management.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment插入记录\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.1查询记录\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical treatment\Medical Treatment_20181225.2完成\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\医疗系统\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Temp\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190102\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190111\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190114\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\Medical Treatment\20190115\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\20190116\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\bin\Debug\Npgsql.dll
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojResolveAssemblyReference.cache
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.Cache
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CoreCompileInputs.cache
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\YEYINXU\Desktop\del\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
