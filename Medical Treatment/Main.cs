@@ -17,20 +17,19 @@ namespace Medical_Treatment
 {
     public partial class Main : Form
     {
-        DBFactory dbFac = new DBFactory();        
+        DBFactory dbFac = new DBFactory();
         static string portName = ConfigurationManager.AppSettings["portName"];
         static int baudRate = int.Parse(ConfigurationManager.AppSettings["baudRate"]);
         SerialPort mySerialPort = new SerialPort(portName, baudRate, Parity.None, 8, StopBits.One);
-        string sql_Q;
         string register_date;
         public Main()
         {
             InitializeComponent();
             this.Text += "_" + Application.ProductVersion.ToString();
             dgv.RowHeadersWidth = 55;
-            q_start_DTP.Value = DateTime.Today;//.AddDays(-0);
-            q_end_DTP.Value = DateTime.Today;//.AddHours(23).AddMinutes(59).AddSeconds(59);
-            bool enabledPort = ConfigurationManager.AppSettings["enabledPort"] == "true" ? true : false;
+            dtpStart.Value = DateTime.Today;//.AddDays(-0);
+            dtpEnd.Value = DateTime.Today;//.AddHours(23).AddMinutes(59).AddSeconds(59);
+            bool enabledPort = ConfigurationManager.AppSettings["enabledPort"] == "1" ? true : false;
             if (enabledPort)
             {
                 try
@@ -48,97 +47,217 @@ namespace Medical_Treatment
 
         private void Main_Load(object sender, EventArgs e)
         {
-            DataTable sqlDT = new DataTable();
-            //sqlDT.Clear();
-            //sqlDT.Columns.Clear();
-            //显示t_record记录表的所有当天记录，即使没有m_user表的用户信息
-            sql_Q = "Select register_date as \"记录日期\",m.user_no as \"工号\",user_name as \"姓名\",user_dept as \"部门\",user_sex as \"性别\",medicine_name as \"药品名称\",dose_specification as \"剂量规格\",outgoing_quantity as \"领出数量\",single_use as \"单次使用量\",batch_number as \"批号\",valid_date as \"有效期\",purpose as \"用途\",remark as \"备注\""
-            + " From t_record m Left Join m_user u on m.user_no = u.user_no"
-            + " Where CAST(register_date AS DATE)= current_date Order By register_date Desc";
-            dbFac.ExecuteDataTable(sql_Q, ref sqlDT);
-            //查询成功，可能有数据也可能没数据
-            if (sqlDT.Rows.Count > 0)
-            {
-                //sqlDT.Columns["原来的列名"].ColumnName = "新的列名";
-                dgv.DataSource = sqlDT;
-            }
-            else { dgv.DataSource = null; }
+            BtnQuery_Click(sender, e);
         }
 
-        private void query_btn_Click(object sender, EventArgs e)
+        private void 添加卡号ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isOpen = false;
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm.Text == "Card_Add")
+                {
+                    isOpen = true;
+                }
+            }
+            if (!isOpen)
+            {
+                new card.Card_Add().Show();
+            }
+        }
+
+        private void 修改卡号ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isOpen = false;
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm.Text == "Card_Update")
+                {
+                    isOpen = true;
+                }
+            }
+            if (!isOpen)
+            {
+                new card.Card_Update().Show();
+            }
+        }
+
+        private void BtnQuery_Click(object sender, EventArgs e)
         {
             //按钮功能是否启用
-            query_gb.Enabled = dgv.Enabled = true; Management_gb.Enabled = false;
-            _New.Enabled = true; _Edit.Enabled = _Delete.Enabled = _Save.Enabled = _Cancel.Enabled = false;
+            gbxQuery.Enabled = dgv.Enabled = true; gbxHistory.Enabled = false;
+            btnNew.Enabled = true; btnUpdate.Enabled = btnDelete.Enabled = btnSave.Enabled = btnCancel.Enabled = false;
             //控件(非Label控件)全部初始
-            foreach (Control c in Management_gb.Controls)
+            foreach (Control c in gbxHistory.Controls)
             {
                 if (!(c is Label)) { c.Text = ""; }
             }
 
-            if (!q_userNO_CB.Checked&&!q_medicineName_CB.Checked&&!q_time_CB.Checked)
+            StringBuilder sql = new StringBuilder();
+            sql.AppendLine(
+@"SELECT register_date AS 记录日期,
+m.card_id AS 卡号,
+u.user_no AS 工号,
+user_name AS 姓名,
+user_dept AS 部门,
+user_sex AS 性别,
+medicine_name AS 药品名称,
+dose_specification AS 剂量规格,
+outgoing_quantity AS 领出数量,
+single_use AS 单次使用量,
+batch_number AS 批号,
+valid_date AS 有效期,
+purpose AS 用途,
+remark AS 备注
+FROM t_history m
+LEFT JOIN m_user u ON m.card_id = u.card_id
+WHERE");
+            bool isFirst = true;
+            if (chkUserNO.Checked)
             {
-                MessageBox.Show("没有选择查询条件", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //if (txtUserNO_Q.Text == "")
+                //{
+                //    MessageBox.Show("条件查询中，工号不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    return;
+                //}
+
+                if (!isFirst) { sql.Append(" AND "); }
+                sql.AppendLine(string.Format("m.user_no='{0}'", txtUserNO_Q.Text));
+                isFirst = false;
+            }
+
+            if (chkMedicineName.Checked)
+            {
+                //if (txtMedicineName_Q.Text == "")
+                //{
+                //    MessageBox.Show("条件查询中，药品名称不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    return;
+                //}
+
+                if (!isFirst) { sql.Append(" AND "); }
+                sql.AppendLine(string.Format("medicine_name~* '{0}'", txtMedicineName_Q.Text));
+                isFirst = false;
+            }
+
+            if (chkTime.Checked)
+            {
+                if (!isFirst) { sql.Append(" AND "); }
+                sql.AppendLine(string.Format("register_date::date between '{0}' and '{1}'",
+                    dtpStart.Value.ToString("yyyy-MM-dd"), dtpEnd.Value.ToString("yyyy-MM-dd")));
+                isFirst = false;
+            }
+
+            sql.AppendLine("Order By register_date Desc");
+
+            if (isFirst)
                 return;
-            }
-            DataTable sqlDT = new DataTable();
-            //显示t_record记录表的所有当天记录，即使没有m_user表的用户信息
-            sql_Q = "Select register_date as \"记录日期\",m.user_no as \"工号\",user_name as \"姓名\",user_dept as \"部门\",user_sex as \"性别\",medicine_name as \"药品名称\",dose_specification as \"剂量规格\",outgoing_quantity as \"领出数量\",single_use as \"单次使用量\",batch_number as \"批号\",valid_date as \"有效期\",purpose as \"用途\",remark as \"备注\""
-            + " From t_record m Left Join m_user u on m.user_no = u.user_no"
-            + " Where";
-            bool addStr = false;
-            if (q_userNO_CB.Checked)
+
+            DataTable dt = new DataTable();
+            dbFac.ExecuteDataTable(sql.ToString(), ref dt);
+            dgv.DataSource = dt;
+            dgv.AutoResizeColumns();
+        }
+
+        private void TxtCardID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            userInfo(txtCardID.Text);
+            txtCardID.SelectAll();
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            //按钮功能是否启用
+            gbxHistory.Enabled = true; gbxQuery.Enabled = dgv.Enabled = false;
+            btnSave.Enabled = btnCancel.Enabled = true; btnNew.Enabled = btnUpdate.Enabled = btnDelete.Enabled = false;
+            //控件全部打开且值为空
+            foreach (Control c in gbxHistory.Controls)
             {
-                sql_Q += " m.user_no='" + q_userNO_TB.Text + "'";
-                addStr = true;
+                c.Enabled = true;
+                if (!(c is Label)) { c.Text = ""; }
             }
-             if (q_medicineName_CB.Checked)
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            gbxHistory.Enabled = true; gbxQuery.Enabled = dgv.Enabled = false;
+            btnNew.Enabled = btnUpdate.Enabled = btnDelete.Enabled = false;
+            btnSave.Enabled = btnCancel.Enabled = true;
+            //控件全部打开
+            foreach (Control c in gbxHistory.Controls)
             {
-                if (addStr) { sql_Q += " And"; }
-                if (q_medicineName_TB.Text == "")
-                {
-                    ////sql += " medicine_name is NULL";
-                    //sql += " medicine_name ='"+q_medicineName_TB.Text+"'";
-                    MessageBox.Show("条件查询中，药品名称不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                else
-                {
-                    sql_Q += " medicine_name~* '" + q_medicineName_TB.Text + "'";
-                }
-                addStr = true;
+                c.Enabled = true;
             }
-            if (q_time_CB.Checked)
+            txtCardID.Enabled = txtUserNO.Enabled = false;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("是否确定删除该记录？", "删除:", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (addStr) { sql_Q += " And"; }
-                sql_Q += " register_date::date between '" + q_start_DTP.Value.ToString("yyyy-MM-dd")+"' and '"+q_end_DTP.Value.ToString("yyyy-MM-dd")+"'";
-                addStr = true;
+                StringBuilder sql = new StringBuilder();
+                sql.AppendLine("Delete From t_history");
+                sql.AppendFormat("Where register_date='{0}'\r\n", register_date);
+                sql.AppendLine("And card_id='" + txtCardID.Text + "'");
+                sql.AppendLine("And medicine_name='" + txtMedicineName.Text + "'");
+                sql.AppendLine("And dose_specification='" + txtDosageSpecification.Text + "'");
+                sql.AppendLine("And outgoing_quantity='" + txtQty.Text + "'");
+                sql.AppendLine("And single_use='" + txtSingleUse.Text + "'");
+                sql.AppendLine("And batch_number='" + txtLot.Text + "'");
+                sql.AppendLine("And valid_date='" + dtpValidDate.Value.ToShortDateString() + " " + dtpValidDate.Value.TimeOfDay + "'");
+                sql.AppendLine("And purpose='" + txtPurpose.Text + "'");
+                sql.AppendLine("And remark='" + txtRemark.Text + "'");
+                dbFac.ExecuteSQL(sql.ToString());
+                BtnQuery_Click(sender, e);
+                BtnCancel_Click(sender, e);
             }
-            sql_Q += " Order By register_date Desc";
-            dbFac.ExecuteDataTable(sql_Q, ref sqlDT);
-            //查询成功，可能有数据也可能没数据
-            if (sqlDT.Rows.Count > 0)
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            //值为空时返回
+            if (txtCardID.Text == "" || txtMedicineName.Text == "")
+            { MessageBox.Show("卡号和药品名称不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information); return; }
+            StringBuilder sql = new StringBuilder();
+
+            //增加记录
+            if (txtCardID.Enabled)
             {
-                dgv.DataSource = sqlDT;
+                sql.AppendLine("INSERT INTO t_history");
+                sql.AppendLine("(card_id, register_date, medicine_name, dose_specification, outgoing_quantity, single_use, batch_number, valid_date, purpose, remark)");
+                sql.AppendFormat("VALUES('{0}', Now(), '{1}', '{2}', '{3}', '{4}', '{5}', ('{6}')::TIMESTAMP, '{7}', '{8}')",
+                    txtCardID.Text, txtMedicineName.Text, txtDosageSpecification.Text, txtQty.Text, txtSingleUse.Text, txtLot.Text, dtpValidDate.Value.ToString("yyyy-MM-dd"), txtPurpose.Text, txtRemark.Text);
             }
+            //更改记录
             else
             {
-                dgv.DataSource = null;
-                MessageBox.Show("根据条件查询，数据库没所需记录", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                sql.AppendLine("UPDATE t_history");
+                sql.AppendFormat("SET medicine_name ='{0}',dose_specification ='{1}',outgoing_quantity ='{2}',single_use ='{3}',batch_number ='{4}',valid_date ='{5}',purpose ='{6}',remark ='{7}'\r\n",
+                    txtMedicineName.Text, txtDosageSpecification.Text, txtQty.Text, txtSingleUse.Text, txtLot.Text, dtpValidDate.Value.ToString("yyyy/MM/dd"), txtPurpose.Text, txtRemark.Text);
+                sql.AppendFormat("WHERE card_id='{0}' AND register_date='{1}'",
+                    txtCardID.Text, register_date);
+            }
+            dbFac.ExecuteSQL(sql.ToString());
+            BtnQuery_Click(sender, e);
+            BtnCancel_Click(sender, e);
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            //按钮功能是否启用
+            gbxQuery.Enabled = dgv.Enabled = true; gbxHistory.Enabled = false;
+            btnNew.Enabled = true; btnUpdate.Enabled = btnDelete.Enabled = btnSave.Enabled = btnCancel.Enabled = false;
+            //控件(非Label控件)全部初始
+            foreach (Control c in gbxHistory.Controls)
+            {
+                if (!(c is Label)) { c.Text = ""; }
             }
         }
 
-        private void save_btn_Click(object sender, EventArgs e)
-        {            
-            if (userNO_TB.Text==""||medicineName_TB.Text=="") { MessageBox.Show("工号和药品名称不能为空" , "信息", MessageBoxButtons.OK, MessageBoxIcon.Information); return; }
-            string sql = "Insert Into t_record(user_no, register_date, medicine_name, dose_specification, outgoing_quantity, single_use, batch_number, valid_date, purpose, remark)"
- + "Values('"+userNO_TB.Text+"', Now(), '"+ medicineName_TB.Text+ "', '" + doseDpecification_TB.Text + "', '" + outgoingQuantity_TB.Text + "', '" + singleUse_TB.Text + "', '" 
- + batchNumber_TB.Text + "', ('"+ validDate_TP .Value.ToString("yyyy-MM-dd")+ "')::timestamp, '" + purpose_TB.Text + "', '" + remark_TB.Text + "')";
-            dbFac.ExecuteSQL(sql);
-            Main_Load(sender,e);
-        }
 
-        private void dgv_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+
+
+        private void Dgv_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             //for (int i = 0; i < dgv.Columns.Count; i++)
             //{
@@ -152,12 +271,12 @@ namespace Medical_Treatment
             for (int i = 0; i < dgv.RowCount; i++)
             {
                 dgv.Rows[i].HeaderCell.Value = ((dgv.RowCount - i).ToString());
-                if (i%2==0)
+                if (i % 2 == 0)
                 {
                     dgv.Rows[i].DefaultCellStyle.BackColor = System.Drawing.Color.LightBlue;
                 }
                 else { dgv.Rows[i].DefaultCellStyle.BackColor = System.Drawing.Color.GreenYellow; }
-                
+
                 if (dgv.Rows[i].Cells["姓名"].Value.ToString() == "")
                 {
                     dgv.Rows[i].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
@@ -165,7 +284,7 @@ namespace Medical_Treatment
             }
         }
 
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int nowRow = dgv.CurrentRow.Index;
             if (dgv.Rows.Count > 0)// && (dgv.Rows[0].Cells[0].Value)!="")
@@ -175,37 +294,31 @@ namespace Medical_Treatment
                 //MessageBox.Show(all.ToShortDateString()+" "+time.ToString());
 
                 DateTime temp = Convert.ToDateTime(dgv.Rows[nowRow].Cells["记录日期"].Value);
-                
-                register_date = temp.ToShortDateString()+" "+temp.TimeOfDay;
-                userNO_TB.Text = dgv.Rows[nowRow].Cells["工号"].Value.ToString();
-                userName_TB.Text = dgv.Rows[nowRow].Cells["姓名"].Value.ToString();
-                userSex_TB.Text = dgv.Rows[nowRow].Cells["性别"].Value.ToString();
-                userDept_TB.Text = dgv.Rows[nowRow].Cells["部门"].Value.ToString();
-                medicineName_TB.Text = dgv.Rows[nowRow].Cells["药品名称"].Value.ToString();
-                doseDpecification_TB.Text = dgv.Rows[nowRow].Cells["剂量规格"].Value.ToString();
-                outgoingQuantity_TB.Text = dgv.Rows[nowRow].Cells["领出数量"].Value.ToString();
-                singleUse_TB.Text = dgv.Rows[nowRow].Cells["单次使用量"].Value.ToString();
-                batchNumber_TB.Text = dgv.Rows[nowRow].Cells["批号"].Value.ToString();
-                validDate_TP.Value = Convert.ToDateTime(dgv.Rows[nowRow].Cells["有效期"].Value);
-                purpose_TB.Text = dgv.Rows[nowRow].Cells["用途"].Value.ToString();
-                remark_TB.Text = dgv.Rows[nowRow].Cells["备注"].Value.ToString();
-                Management_gb.Enabled =false;
-                _New.Enabled = _Edit.Enabled = _Delete.Enabled =  true;
-                 _Cancel.Enabled = false;
+
+                register_date = temp.ToShortDateString() + " " + temp.TimeOfDay;
+                txtCardID.Text = dgv.Rows[nowRow].Cells["卡号"].Value.ToString();
+                txtUserNO.Text = dgv.Rows[nowRow].Cells["工号"].Value.ToString();
+                txtUserName.Text = dgv.Rows[nowRow].Cells["姓名"].Value.ToString();
+                txtSex.Text = dgv.Rows[nowRow].Cells["性别"].Value.ToString();
+                txtDept.Text = dgv.Rows[nowRow].Cells["部门"].Value.ToString();
+                txtMedicineName.Text = dgv.Rows[nowRow].Cells["药品名称"].Value.ToString();
+                txtDosageSpecification.Text = dgv.Rows[nowRow].Cells["剂量规格"].Value.ToString();
+                txtQty.Text = dgv.Rows[nowRow].Cells["领出数量"].Value.ToString();
+                txtSingleUse.Text = dgv.Rows[nowRow].Cells["单次使用量"].Value.ToString();
+                txtLot.Text = dgv.Rows[nowRow].Cells["批号"].Value.ToString();
+                dtpValidDate.Value = Convert.ToDateTime(dgv.Rows[nowRow].Cells["有效期"].Value);
+                txtPurpose.Text = dgv.Rows[nowRow].Cells["用途"].Value.ToString();
+                txtRemark.Text = dgv.Rows[nowRow].Cells["备注"].Value.ToString();
+                gbxHistory.Enabled = false;
+                btnNew.Enabled = btnUpdate.Enabled = btnDelete.Enabled = true;
+                btnCancel.Enabled = false;
             }
-            //if (DataInformation.Proc_Data_Point != "")
-            //{ _New.Enabled = true; }
         }
 
-        private void cardID_TB_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode != Keys.Enter) return;
-            userInfo(cardID_TB.Text);
-            cardID_TB.Text = "";
-        }
 
+        #region 串口接收动作
         string buffer;
-        void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             SerialPort sp = (SerialPort)sender;
             //接收到的信息
@@ -231,131 +344,27 @@ namespace Medical_Treatment
             }
             userInfo(card_id);
         }
+        #endregion
 
-        void userInfo(string card_id)
+        private void userInfo(string card_id)
         {
             string sql = String.Format("Select user_no,user_name,user_dept,user_sex From m_user Where card_id='{0}'", card_id);
-            DataTable sqlDT = new DataTable();
-            dbFac.ExecuteDataTable(sql, ref sqlDT);
+            DataTable dt = new DataTable();
+            dbFac.ExecuteDataTable(sql, ref dt);
             //查询成功，可能有数据也可能没数据
-            if (sqlDT.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
-                userNO_TB.Text = sqlDT.Rows[0]["user_no"].ToString();
-                userName_TB.Text = sqlDT.Rows[0]["user_name"].ToString();
-                userDept_TB.Text = sqlDT.Rows[0]["user_dept"].ToString();
-                userSex_TB.Text = sqlDT.Rows[0]["user_sex"].ToString();
+                txtUserNO.Text = dt.Rows[0]["user_no"].ToString();
+                txtUserName.Text = dt.Rows[0]["user_name"].ToString();
+                txtDept.Text = dt.Rows[0]["user_dept"].ToString();
+                txtSex.Text = dt.Rows[0]["user_sex"].ToString();
                 //dgv.DataSource = sqlDT;
             }
             else
             {
-                userNO_TB.Text = userName_TB.Text = userDept_TB.Text = userSex_TB.Text = "";
-                MessageBox.Show("该工号没添加到数据库", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtUserNO.Text = txtUserName.Text = txtDept.Text = txtSex.Text = "";
+                MessageBox.Show("该卡号没添加到数据库，请添加后再操作", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void _New_Click(object sender, EventArgs e)
-        {
-            //按钮功能是否启用
-            Management_gb.Enabled = true; query_gb.Enabled=dgv.Enabled = false;
-            _Save.Enabled = _Cancel.Enabled = true; _New.Enabled = _Edit.Enabled = _Delete.Enabled = false;
-            //控件全部打开且值为空
-            foreach (Control c in Management_gb.Controls)
-            {
-                c.Enabled = true;
-                if (!(c is Label)) { c.Text = ""; }
-            }
-        }
-
-        private void _Edit_Click(object sender, EventArgs e)
-        {
-            Management_gb.Enabled = true; query_gb.Enabled = dgv.Enabled = false;
-            _New.Enabled =_Edit.Enabled= _Delete.Enabled = false;
-            _Save.Enabled = _Cancel.Enabled = true;
-            //控件全部打开
-            foreach (Control c in Management_gb.Controls)
-            {
-                c.Enabled = true;
-            }
-            cardID_TB.Enabled = userNO_TB.Enabled = false;
-        }
-
-        private void _Delete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("是否确定删除该记录？", "删除:", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                StringBuilder sql = new StringBuilder();
-                sql.Append("Delete From t_record");
-                sql.AppendFormat(" Where register_date='{0}'", register_date);
-                sql.Append(" And user_no='"+userNO_TB.Text+"'");
-                sql.Append(" And medicine_name='"+medicineName_TB.Text+"'");
-                sql.Append(" And dose_specification='"+doseDpecification_TB.Text+"'");
-                sql.Append(" And outgoing_quantity='"+outgoingQuantity_TB.Text+"'");
-                sql.Append(" And single_use='"+singleUse_TB.Text+"'");
-                sql.Append(" And batch_number='"+batchNumber_TB.Text+"'");
-                sql.Append(" And valid_date='"+validDate_TP.Value.ToShortDateString()+" "+ validDate_TP.Value.TimeOfDay+ "'");
-                sql.Append(" And purpose='"+purpose_TB.Text+"'");
-                sql.Append(" And remark='"+remark_TB.Text+"'");
-                dbFac.ExecuteSQL(sql.ToString());
-                //MessageBox.Show("已删除,"+ dbFac.ExecuteSQL(sql.ToString()).ToString() + "条记录");
-                lastQuery();
-                _Cancel_Click(sender, e);
-            }
-        }
-
-        private void _Save_Click(object sender, EventArgs e)
-        {
-            //值为空时返回
-            if (userNO_TB.Text == "" || medicineName_TB.Text == "") { MessageBox.Show("工号和药品名称不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information); return; }
-            string sql="";
-            //增加记录
-            if (userNO_TB.Enabled)
-            {
-                sql = "Insert Into t_record(user_no, register_date, medicine_name, dose_specification, outgoing_quantity, single_use, batch_number, valid_date, purpose, remark)"
-+ "Values('" + userNO_TB.Text + "', Now(), '" + medicineName_TB.Text + "', '" + doseDpecification_TB.Text + "', '" + outgoingQuantity_TB.Text + "', '" + singleUse_TB.Text + "', '"
-+ batchNumber_TB.Text + "', ('" + validDate_TP.Value.ToString("yyyy-MM-dd") + "')::timestamp, '" + purpose_TB.Text + "', '" + remark_TB.Text + "')";
-            }
-            //更改记录
-            else
-            {
-                sql = string.Format("Update t_record Set medicine_name ='{0}'," +
-                    "dose_specification ='{1}'," +
-                    "outgoing_quantity ='{2}'," +
-                    "single_use ='{3}'," +
-                    "batch_number ='{4}'," +
-                    "valid_date ='{5}'," +
-                    "purpose ='{6}'," +
-                    "remark ='{7}'" +
-                    "Where user_no='{8}' And register_date='{9}'",medicineName_TB.Text,doseDpecification_TB.Text,outgoingQuantity_TB.Text,
-                    singleUse_TB.Text,batchNumber_TB.Text,validDate_TP.Value.ToShortDateString(),
-                    purpose_TB.Text,remark_TB.Text,userNO_TB.Text,register_date);
-            }
-            dbFac.ExecuteSQL(sql);
-            lastQuery();
-            _Cancel_Click(sender, e);
-        }
-
-        private void _Cancel_Click(object sender, EventArgs e)
-        {
-            //按钮功能是否启用
-            query_gb.Enabled = dgv.Enabled = true; Management_gb.Enabled = false;
-            _New.Enabled = true;_Edit.Enabled = _Delete.Enabled = _Save.Enabled = _Cancel.Enabled = false;
-            //控件(非Label控件)全部初始
-            foreach (Control c in Management_gb.Controls)
-            {
-                if (!(c is Label)) { c.Text = ""; }
-            }
-        }
-
-        void lastQuery()
-        {
-            DataTable sqlDT = new DataTable();
-            dbFac.ExecuteDataTable(sql_Q, ref sqlDT);
-            //查询成功，可能有数据也可能没数据
-            if (sqlDT.Rows.Count > 0)
-            {
-                dgv.DataSource = sqlDT;
-            }
-            else { dgv.DataSource = null; }
         }
     }
 }

@@ -31,35 +31,35 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.query_gb = new System.Windows.Forms.GroupBox();
-            this.query_btn = new System.Windows.Forms.Button();
-            this.q_start_DTP = new System.Windows.Forms.DateTimePicker();
-            this.q_time_CB = new System.Windows.Forms.CheckBox();
-            this.q_medicineName_CB = new System.Windows.Forms.CheckBox();
-            this.q_userNO_CB = new System.Windows.Forms.CheckBox();
+            this.gbxQuery = new System.Windows.Forms.GroupBox();
+            this.btnQuery = new System.Windows.Forms.Button();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.chkTime = new System.Windows.Forms.CheckBox();
+            this.chkMedicineName = new System.Windows.Forms.CheckBox();
+            this.chkUserNO = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.q_end_DTP = new System.Windows.Forms.DateTimePicker();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.q_medicineName_TB = new System.Windows.Forms.TextBox();
+            this.txtMedicineName_Q = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.q_userNO_TB = new System.Windows.Forms.TextBox();
+            this.txtUserNO_Q = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.Management_gb = new System.Windows.Forms.GroupBox();
+            this.gbxHistory = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cardID_TB = new System.Windows.Forms.TextBox();
-            this.validDate_TP = new System.Windows.Forms.DateTimePicker();
-            this.remark_TB = new System.Windows.Forms.TextBox();
-            this.purpose_TB = new System.Windows.Forms.TextBox();
-            this.batchNumber_TB = new System.Windows.Forms.TextBox();
-            this.singleUse_TB = new System.Windows.Forms.TextBox();
-            this.outgoingQuantity_TB = new System.Windows.Forms.TextBox();
-            this.doseDpecification_TB = new System.Windows.Forms.TextBox();
-            this.medicineName_TB = new System.Windows.Forms.TextBox();
-            this.userDept_TB = new System.Windows.Forms.TextBox();
-            this.userSex_TB = new System.Windows.Forms.TextBox();
-            this.userName_TB = new System.Windows.Forms.TextBox();
-            this.userNO_TB = new System.Windows.Forms.TextBox();
+            this.txtCardID = new System.Windows.Forms.TextBox();
+            this.dtpValidDate = new System.Windows.Forms.DateTimePicker();
+            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.txtPurpose = new System.Windows.Forms.TextBox();
+            this.txtLot = new System.Windows.Forms.TextBox();
+            this.txtSingleUse = new System.Windows.Forms.TextBox();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.txtDosageSpecification = new System.Windows.Forms.TextBox();
+            this.txtMedicineName = new System.Windows.Forms.TextBox();
+            this.txtDept = new System.Windows.Forms.TextBox();
+            this.txtSex = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtUserNO = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -72,82 +72,89 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this._Edit = new System.Windows.Forms.Button();
-            this._Cancel = new System.Windows.Forms.Button();
-            this._Save = new System.Windows.Forms.Button();
-            this._Delete = new System.Windows.Forms.Button();
-            this._New = new System.Windows.Forms.Button();
-            this.query_gb.SuspendLayout();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.卡号管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.添加卡号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改卡号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbxQuery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
-            this.Management_gb.SuspendLayout();
+            this.gbxHistory.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // query_gb
+            // gbxQuery
             // 
-            this.query_gb.Controls.Add(this.query_btn);
-            this.query_gb.Controls.Add(this.q_start_DTP);
-            this.query_gb.Controls.Add(this.q_time_CB);
-            this.query_gb.Controls.Add(this.q_medicineName_CB);
-            this.query_gb.Controls.Add(this.q_userNO_CB);
-            this.query_gb.Controls.Add(this.label6);
-            this.query_gb.Controls.Add(this.q_end_DTP);
-            this.query_gb.Controls.Add(this.label4);
-            this.query_gb.Controls.Add(this.label3);
-            this.query_gb.Controls.Add(this.q_medicineName_TB);
-            this.query_gb.Controls.Add(this.label1);
-            this.query_gb.Controls.Add(this.q_userNO_TB);
-            this.query_gb.Location = new System.Drawing.Point(12, 7);
-            this.query_gb.Name = "query_gb";
-            this.query_gb.Size = new System.Drawing.Size(749, 80);
-            this.query_gb.TabIndex = 5;
-            this.query_gb.TabStop = false;
-            this.query_gb.Text = "查询：";
+            this.gbxQuery.Controls.Add(this.btnQuery);
+            this.gbxQuery.Controls.Add(this.dtpStart);
+            this.gbxQuery.Controls.Add(this.chkTime);
+            this.gbxQuery.Controls.Add(this.chkMedicineName);
+            this.gbxQuery.Controls.Add(this.chkUserNO);
+            this.gbxQuery.Controls.Add(this.label6);
+            this.gbxQuery.Controls.Add(this.dtpEnd);
+            this.gbxQuery.Controls.Add(this.label4);
+            this.gbxQuery.Controls.Add(this.label3);
+            this.gbxQuery.Controls.Add(this.txtMedicineName_Q);
+            this.gbxQuery.Controls.Add(this.label1);
+            this.gbxQuery.Controls.Add(this.txtUserNO_Q);
+            this.gbxQuery.Location = new System.Drawing.Point(12, 35);
+            this.gbxQuery.Name = "gbxQuery";
+            this.gbxQuery.Size = new System.Drawing.Size(749, 80);
+            this.gbxQuery.TabIndex = 5;
+            this.gbxQuery.TabStop = false;
+            this.gbxQuery.Text = "查询：";
             // 
-            // query_btn
+            // btnQuery
             // 
-            this.query_btn.Location = new System.Drawing.Point(668, 16);
-            this.query_btn.Name = "query_btn";
-            this.query_btn.Size = new System.Drawing.Size(75, 55);
-            this.query_btn.TabIndex = 13;
-            this.query_btn.Text = "查询";
-            this.query_btn.UseVisualStyleBackColor = true;
-            this.query_btn.Click += new System.EventHandler(this.query_btn_Click);
+            this.btnQuery.Location = new System.Drawing.Point(668, 16);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(75, 55);
+            this.btnQuery.TabIndex = 13;
+            this.btnQuery.Text = "查询";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.BtnQuery_Click);
             // 
-            // q_start_DTP
+            // dtpStart
             // 
-            this.q_start_DTP.CustomFormat = "yyyy-MM-dd HH:mm";
-            this.q_start_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.q_start_DTP.Location = new System.Drawing.Point(400, 15);
-            this.q_start_DTP.Name = "q_start_DTP";
-            this.q_start_DTP.Size = new System.Drawing.Size(94, 21);
-            this.q_start_DTP.TabIndex = 24;
+            this.dtpStart.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStart.Location = new System.Drawing.Point(400, 15);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(94, 21);
+            this.dtpStart.TabIndex = 24;
             // 
-            // q_time_CB
+            // chkTime
             // 
-            this.q_time_CB.AutoSize = true;
-            this.q_time_CB.Location = new System.Drawing.Point(527, 20);
-            this.q_time_CB.Name = "q_time_CB";
-            this.q_time_CB.Size = new System.Drawing.Size(15, 14);
-            this.q_time_CB.TabIndex = 23;
-            this.q_time_CB.UseVisualStyleBackColor = true;
+            this.chkTime.AutoSize = true;
+            this.chkTime.Checked = true;
+            this.chkTime.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTime.Location = new System.Drawing.Point(527, 20);
+            this.chkTime.Name = "chkTime";
+            this.chkTime.Size = new System.Drawing.Size(15, 14);
+            this.chkTime.TabIndex = 23;
+            this.chkTime.UseVisualStyleBackColor = true;
             // 
-            // q_medicineName_CB
+            // chkMedicineName
             // 
-            this.q_medicineName_CB.AutoSize = true;
-            this.q_medicineName_CB.Location = new System.Drawing.Point(265, 50);
-            this.q_medicineName_CB.Name = "q_medicineName_CB";
-            this.q_medicineName_CB.Size = new System.Drawing.Size(15, 14);
-            this.q_medicineName_CB.TabIndex = 20;
-            this.q_medicineName_CB.UseVisualStyleBackColor = true;
+            this.chkMedicineName.AutoSize = true;
+            this.chkMedicineName.Location = new System.Drawing.Point(265, 50);
+            this.chkMedicineName.Name = "chkMedicineName";
+            this.chkMedicineName.Size = new System.Drawing.Size(15, 14);
+            this.chkMedicineName.TabIndex = 20;
+            this.chkMedicineName.UseVisualStyleBackColor = true;
             // 
-            // q_userNO_CB
+            // chkUserNO
             // 
-            this.q_userNO_CB.AutoSize = true;
-            this.q_userNO_CB.Location = new System.Drawing.Point(265, 20);
-            this.q_userNO_CB.Name = "q_userNO_CB";
-            this.q_userNO_CB.Size = new System.Drawing.Size(15, 14);
-            this.q_userNO_CB.TabIndex = 19;
-            this.q_userNO_CB.UseVisualStyleBackColor = true;
+            this.chkUserNO.AutoSize = true;
+            this.chkUserNO.Location = new System.Drawing.Point(265, 20);
+            this.chkUserNO.Name = "chkUserNO";
+            this.chkUserNO.Size = new System.Drawing.Size(15, 14);
+            this.chkUserNO.TabIndex = 19;
+            this.chkUserNO.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -158,14 +165,14 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "to";
             // 
-            // q_end_DTP
+            // dtpEnd
             // 
-            this.q_end_DTP.CustomFormat = "yyyy-MM-dd HH:mm";
-            this.q_end_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.q_end_DTP.Location = new System.Drawing.Point(400, 50);
-            this.q_end_DTP.Name = "q_end_DTP";
-            this.q_end_DTP.Size = new System.Drawing.Size(94, 21);
-            this.q_end_DTP.TabIndex = 14;
+            this.dtpEnd.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnd.Location = new System.Drawing.Point(400, 50);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(94, 21);
+            this.dtpEnd.TabIndex = 14;
             // 
             // label4
             // 
@@ -185,12 +192,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "创建时间：";
             // 
-            // q_medicineName_TB
+            // txtMedicineName_Q
             // 
-            this.q_medicineName_TB.Location = new System.Drawing.Point(100, 45);
-            this.q_medicineName_TB.Name = "q_medicineName_TB";
-            this.q_medicineName_TB.Size = new System.Drawing.Size(132, 21);
-            this.q_medicineName_TB.TabIndex = 5;
+            this.txtMedicineName_Q.Location = new System.Drawing.Point(100, 45);
+            this.txtMedicineName_Q.Name = "txtMedicineName_Q";
+            this.txtMedicineName_Q.Size = new System.Drawing.Size(132, 21);
+            this.txtMedicineName_Q.TabIndex = 5;
             // 
             // label1
             // 
@@ -201,12 +208,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "工号：";
             // 
-            // q_userNO_TB
+            // txtUserNO_Q
             // 
-            this.q_userNO_TB.Location = new System.Drawing.Point(100, 15);
-            this.q_userNO_TB.Name = "q_userNO_TB";
-            this.q_userNO_TB.Size = new System.Drawing.Size(132, 21);
-            this.q_userNO_TB.TabIndex = 1;
+            this.txtUserNO_Q.Location = new System.Drawing.Point(100, 15);
+            this.txtUserNO_Q.Name = "txtUserNO_Q";
+            this.txtUserNO_Q.Size = new System.Drawing.Size(132, 21);
+            this.txtUserNO_Q.TabIndex = 1;
             // 
             // dgv
             // 
@@ -233,50 +240,50 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv.Location = new System.Drawing.Point(12, 261);
+            this.dgv.Location = new System.Drawing.Point(12, 296);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowTemplate.Height = 23;
-            this.dgv.Size = new System.Drawing.Size(889, 323);
+            this.dgv.Size = new System.Drawing.Size(889, 288);
             this.dgv.TabIndex = 4;
-            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
-            this.dgv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_DataBindingComplete);
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_CellClick);
+            this.dgv.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.Dgv_DataBindingComplete);
             // 
-            // Management_gb
+            // gbxHistory
             // 
-            this.Management_gb.Controls.Add(this.label2);
-            this.Management_gb.Controls.Add(this.cardID_TB);
-            this.Management_gb.Controls.Add(this.validDate_TP);
-            this.Management_gb.Controls.Add(this.remark_TB);
-            this.Management_gb.Controls.Add(this.purpose_TB);
-            this.Management_gb.Controls.Add(this.batchNumber_TB);
-            this.Management_gb.Controls.Add(this.singleUse_TB);
-            this.Management_gb.Controls.Add(this.outgoingQuantity_TB);
-            this.Management_gb.Controls.Add(this.doseDpecification_TB);
-            this.Management_gb.Controls.Add(this.medicineName_TB);
-            this.Management_gb.Controls.Add(this.userDept_TB);
-            this.Management_gb.Controls.Add(this.userSex_TB);
-            this.Management_gb.Controls.Add(this.userName_TB);
-            this.Management_gb.Controls.Add(this.userNO_TB);
-            this.Management_gb.Controls.Add(this.label18);
-            this.Management_gb.Controls.Add(this.label17);
-            this.Management_gb.Controls.Add(this.label16);
-            this.Management_gb.Controls.Add(this.label15);
-            this.Management_gb.Controls.Add(this.label14);
-            this.Management_gb.Controls.Add(this.label13);
-            this.Management_gb.Controls.Add(this.label12);
-            this.Management_gb.Controls.Add(this.label11);
-            this.Management_gb.Controls.Add(this.label10);
-            this.Management_gb.Controls.Add(this.label9);
-            this.Management_gb.Controls.Add(this.label8);
-            this.Management_gb.Controls.Add(this.label7);
-            this.Management_gb.Enabled = false;
-            this.Management_gb.Location = new System.Drawing.Point(12, 93);
-            this.Management_gb.Name = "Management_gb";
-            this.Management_gb.Size = new System.Drawing.Size(813, 162);
-            this.Management_gb.TabIndex = 6;
-            this.Management_gb.TabStop = false;
-            this.Management_gb.Text = "操作：";
+            this.gbxHistory.Controls.Add(this.label2);
+            this.gbxHistory.Controls.Add(this.txtCardID);
+            this.gbxHistory.Controls.Add(this.dtpValidDate);
+            this.gbxHistory.Controls.Add(this.txtRemark);
+            this.gbxHistory.Controls.Add(this.txtPurpose);
+            this.gbxHistory.Controls.Add(this.txtLot);
+            this.gbxHistory.Controls.Add(this.txtSingleUse);
+            this.gbxHistory.Controls.Add(this.txtQty);
+            this.gbxHistory.Controls.Add(this.txtDosageSpecification);
+            this.gbxHistory.Controls.Add(this.txtMedicineName);
+            this.gbxHistory.Controls.Add(this.txtDept);
+            this.gbxHistory.Controls.Add(this.txtSex);
+            this.gbxHistory.Controls.Add(this.txtUserName);
+            this.gbxHistory.Controls.Add(this.txtUserNO);
+            this.gbxHistory.Controls.Add(this.label18);
+            this.gbxHistory.Controls.Add(this.label17);
+            this.gbxHistory.Controls.Add(this.label16);
+            this.gbxHistory.Controls.Add(this.label15);
+            this.gbxHistory.Controls.Add(this.label14);
+            this.gbxHistory.Controls.Add(this.label13);
+            this.gbxHistory.Controls.Add(this.label12);
+            this.gbxHistory.Controls.Add(this.label11);
+            this.gbxHistory.Controls.Add(this.label10);
+            this.gbxHistory.Controls.Add(this.label9);
+            this.gbxHistory.Controls.Add(this.label8);
+            this.gbxHistory.Controls.Add(this.label7);
+            this.gbxHistory.Enabled = false;
+            this.gbxHistory.Location = new System.Drawing.Point(12, 121);
+            this.gbxHistory.Name = "gbxHistory";
+            this.gbxHistory.Size = new System.Drawing.Size(813, 162);
+            this.gbxHistory.TabIndex = 6;
+            this.gbxHistory.TabStop = false;
+            this.gbxHistory.Text = "操作：";
             // 
             // label2
             // 
@@ -287,103 +294,104 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "刷卡处：";
             // 
-            // cardID_TB
+            // txtCardID
             // 
-            this.cardID_TB.Location = new System.Drawing.Point(71, 15);
-            this.cardID_TB.Name = "cardID_TB";
-            this.cardID_TB.Size = new System.Drawing.Size(100, 21);
-            this.cardID_TB.TabIndex = 26;
-            this.cardID_TB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cardID_TB_KeyDown);
+            this.txtCardID.Location = new System.Drawing.Point(71, 15);
+            this.txtCardID.Name = "txtCardID";
+            this.txtCardID.Size = new System.Drawing.Size(100, 21);
+            this.txtCardID.TabIndex = 26;
+            this.txtCardID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCardID_KeyDown);
             // 
-            // validDate_TP
+            // dtpValidDate
             // 
-            this.validDate_TP.CustomFormat = "yyyy-MM-dd HH:mm";
-            this.validDate_TP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.validDate_TP.Location = new System.Drawing.Point(503, 20);
-            this.validDate_TP.Name = "validDate_TP";
-            this.validDate_TP.Size = new System.Drawing.Size(100, 21);
-            this.validDate_TP.TabIndex = 25;
+            this.dtpValidDate.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.dtpValidDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpValidDate.Location = new System.Drawing.Point(503, 20);
+            this.dtpValidDate.Name = "dtpValidDate";
+            this.dtpValidDate.Size = new System.Drawing.Size(100, 21);
+            this.dtpValidDate.TabIndex = 25;
             // 
-            // remark_TB
+            // txtRemark
             // 
-            this.remark_TB.Location = new System.Drawing.Point(503, 74);
-            this.remark_TB.Multiline = true;
-            this.remark_TB.Name = "remark_TB";
-            this.remark_TB.Size = new System.Drawing.Size(299, 78);
-            this.remark_TB.TabIndex = 22;
+            this.txtRemark.Location = new System.Drawing.Point(503, 74);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(299, 78);
+            this.txtRemark.TabIndex = 22;
             // 
-            // purpose_TB
+            // txtPurpose
             // 
-            this.purpose_TB.Location = new System.Drawing.Point(503, 47);
-            this.purpose_TB.Name = "purpose_TB";
-            this.purpose_TB.Size = new System.Drawing.Size(299, 21);
-            this.purpose_TB.TabIndex = 21;
+            this.txtPurpose.Location = new System.Drawing.Point(503, 47);
+            this.txtPurpose.Name = "txtPurpose";
+            this.txtPurpose.Size = new System.Drawing.Size(299, 21);
+            this.txtPurpose.TabIndex = 21;
             // 
-            // batchNumber_TB
+            // txtLot
             // 
-            this.batchNumber_TB.Location = new System.Drawing.Point(300, 135);
-            this.batchNumber_TB.Name = "batchNumber_TB";
-            this.batchNumber_TB.Size = new System.Drawing.Size(100, 21);
-            this.batchNumber_TB.TabIndex = 20;
+            this.txtLot.Location = new System.Drawing.Point(300, 135);
+            this.txtLot.Name = "txtLot";
+            this.txtLot.Size = new System.Drawing.Size(100, 21);
+            this.txtLot.TabIndex = 20;
             // 
-            // singleUse_TB
+            // txtSingleUse
             // 
-            this.singleUse_TB.Location = new System.Drawing.Point(300, 105);
-            this.singleUse_TB.Name = "singleUse_TB";
-            this.singleUse_TB.Size = new System.Drawing.Size(100, 21);
-            this.singleUse_TB.TabIndex = 19;
+            this.txtSingleUse.Location = new System.Drawing.Point(300, 105);
+            this.txtSingleUse.Name = "txtSingleUse";
+            this.txtSingleUse.Size = new System.Drawing.Size(100, 21);
+            this.txtSingleUse.TabIndex = 19;
             // 
-            // outgoingQuantity_TB
+            // txtQty
             // 
-            this.outgoingQuantity_TB.Location = new System.Drawing.Point(300, 75);
-            this.outgoingQuantity_TB.Name = "outgoingQuantity_TB";
-            this.outgoingQuantity_TB.Size = new System.Drawing.Size(100, 21);
-            this.outgoingQuantity_TB.TabIndex = 18;
+            this.txtQty.Location = new System.Drawing.Point(300, 75);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(100, 21);
+            this.txtQty.TabIndex = 18;
             // 
-            // doseDpecification_TB
+            // txtDosageSpecification
             // 
-            this.doseDpecification_TB.Location = new System.Drawing.Point(300, 45);
-            this.doseDpecification_TB.Name = "doseDpecification_TB";
-            this.doseDpecification_TB.Size = new System.Drawing.Size(100, 21);
-            this.doseDpecification_TB.TabIndex = 17;
+            this.txtDosageSpecification.Location = new System.Drawing.Point(300, 45);
+            this.txtDosageSpecification.Name = "txtDosageSpecification";
+            this.txtDosageSpecification.Size = new System.Drawing.Size(100, 21);
+            this.txtDosageSpecification.TabIndex = 17;
             // 
-            // medicineName_TB
+            // txtMedicineName
             // 
-            this.medicineName_TB.Location = new System.Drawing.Point(300, 15);
-            this.medicineName_TB.Name = "medicineName_TB";
-            this.medicineName_TB.Size = new System.Drawing.Size(100, 21);
-            this.medicineName_TB.TabIndex = 16;
+            this.txtMedicineName.Location = new System.Drawing.Point(300, 15);
+            this.txtMedicineName.Name = "txtMedicineName";
+            this.txtMedicineName.Size = new System.Drawing.Size(100, 21);
+            this.txtMedicineName.TabIndex = 16;
             // 
-            // userDept_TB
+            // txtDept
             // 
-            this.userDept_TB.Location = new System.Drawing.Point(71, 135);
-            this.userDept_TB.Name = "userDept_TB";
-            this.userDept_TB.ReadOnly = true;
-            this.userDept_TB.Size = new System.Drawing.Size(100, 21);
-            this.userDept_TB.TabIndex = 15;
+            this.txtDept.Location = new System.Drawing.Point(71, 135);
+            this.txtDept.Name = "txtDept";
+            this.txtDept.ReadOnly = true;
+            this.txtDept.Size = new System.Drawing.Size(100, 21);
+            this.txtDept.TabIndex = 15;
             // 
-            // userSex_TB
+            // txtSex
             // 
-            this.userSex_TB.Location = new System.Drawing.Point(71, 105);
-            this.userSex_TB.Name = "userSex_TB";
-            this.userSex_TB.ReadOnly = true;
-            this.userSex_TB.Size = new System.Drawing.Size(100, 21);
-            this.userSex_TB.TabIndex = 14;
+            this.txtSex.Location = new System.Drawing.Point(71, 105);
+            this.txtSex.Name = "txtSex";
+            this.txtSex.ReadOnly = true;
+            this.txtSex.Size = new System.Drawing.Size(100, 21);
+            this.txtSex.TabIndex = 14;
             // 
-            // userName_TB
+            // txtUserName
             // 
-            this.userName_TB.Location = new System.Drawing.Point(71, 75);
-            this.userName_TB.Name = "userName_TB";
-            this.userName_TB.ReadOnly = true;
-            this.userName_TB.Size = new System.Drawing.Size(100, 21);
-            this.userName_TB.TabIndex = 13;
+            this.txtUserName.Location = new System.Drawing.Point(71, 75);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.ReadOnly = true;
+            this.txtUserName.Size = new System.Drawing.Size(100, 21);
+            this.txtUserName.TabIndex = 13;
             // 
-            // userNO_TB
+            // txtUserNO
             // 
-            this.userNO_TB.Location = new System.Drawing.Point(71, 45);
-            this.userNO_TB.Name = "userNO_TB";
-            this.userNO_TB.Size = new System.Drawing.Size(100, 21);
-            this.userNO_TB.TabIndex = 12;
+            this.txtUserNO.Location = new System.Drawing.Point(71, 45);
+            this.txtUserNO.Name = "txtUserNO";
+            this.txtUserNO.ReadOnly = true;
+            this.txtUserNO.Size = new System.Drawing.Size(100, 21);
+            this.txtUserNO.TabIndex = 12;
             // 
             // label18
             // 
@@ -493,102 +501,140 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "药品名称：";
             // 
-            // _Edit
+            // btnUpdate
             // 
-            this._Edit.Enabled = false;
-            this._Edit.Location = new System.Drawing.Point(832, 140);
-            this._Edit.Name = "_Edit";
-            this._Edit.Size = new System.Drawing.Size(75, 21);
-            this._Edit.TabIndex = 212;
-            this._Edit.Text = "修改";
-            this._Edit.UseVisualStyleBackColor = true;
-            this._Edit.Click += new System.EventHandler(this._Edit_Click);
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Location = new System.Drawing.Point(832, 168);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 21);
+            this.btnUpdate.TabIndex = 212;
+            this.btnUpdate.Text = "修改";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // _Cancel
+            // btnCancel
             // 
-            this._Cancel.Enabled = false;
-            this._Cancel.Location = new System.Drawing.Point(832, 230);
-            this._Cancel.Name = "_Cancel";
-            this._Cancel.Size = new System.Drawing.Size(75, 21);
-            this._Cancel.TabIndex = 214;
-            this._Cancel.Text = "取消";
-            this._Cancel.UseVisualStyleBackColor = true;
-            this._Cancel.Click += new System.EventHandler(this._Cancel_Click);
+            this.btnCancel.Enabled = false;
+            this.btnCancel.Location = new System.Drawing.Point(832, 258);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 21);
+            this.btnCancel.TabIndex = 214;
+            this.btnCancel.Text = "取消";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // _Save
+            // btnSave
             // 
-            this._Save.Enabled = false;
-            this._Save.Location = new System.Drawing.Point(832, 200);
-            this._Save.Name = "_Save";
-            this._Save.Size = new System.Drawing.Size(75, 21);
-            this._Save.TabIndex = 213;
-            this._Save.Text = "保存";
-            this._Save.UseVisualStyleBackColor = true;
-            this._Save.Click += new System.EventHandler(this._Save_Click);
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(832, 228);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 21);
+            this.btnSave.TabIndex = 213;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // _Delete
+            // btnDelete
             // 
-            this._Delete.Enabled = false;
-            this._Delete.Location = new System.Drawing.Point(832, 170);
-            this._Delete.Name = "_Delete";
-            this._Delete.Size = new System.Drawing.Size(75, 21);
-            this._Delete.TabIndex = 211;
-            this._Delete.Text = "删除";
-            this._Delete.UseVisualStyleBackColor = true;
-            this._Delete.Click += new System.EventHandler(this._Delete_Click);
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(832, 198);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 21);
+            this.btnDelete.TabIndex = 211;
+            this.btnDelete.Text = "删除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // _New
+            // btnNew
             // 
-            this._New.Location = new System.Drawing.Point(832, 110);
-            this._New.Name = "_New";
-            this._New.Size = new System.Drawing.Size(75, 21);
-            this._New.TabIndex = 210;
-            this._New.Text = "新建";
-            this._New.UseVisualStyleBackColor = true;
-            this._New.Click += new System.EventHandler(this._New_Click);
+            this.btnNew.Location = new System.Drawing.Point(832, 138);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 21);
+            this.btnNew.TabIndex = 210;
+            this.btnNew.Text = "新建";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.卡号管理ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(913, 25);
+            this.menuStrip1.TabIndex = 215;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 卡号管理ToolStripMenuItem
+            // 
+            this.卡号管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.添加卡号ToolStripMenuItem,
+            this.修改卡号ToolStripMenuItem});
+            this.卡号管理ToolStripMenuItem.Name = "卡号管理ToolStripMenuItem";
+            this.卡号管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.卡号管理ToolStripMenuItem.Text = "卡号管理";
+            // 
+            // 添加卡号ToolStripMenuItem
+            // 
+            this.添加卡号ToolStripMenuItem.Name = "添加卡号ToolStripMenuItem";
+            this.添加卡号ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.添加卡号ToolStripMenuItem.Text = "添加卡号";
+            this.添加卡号ToolStripMenuItem.Click += new System.EventHandler(this.添加卡号ToolStripMenuItem_Click);
+            // 
+            // 修改卡号ToolStripMenuItem
+            // 
+            this.修改卡号ToolStripMenuItem.Name = "修改卡号ToolStripMenuItem";
+            this.修改卡号ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.修改卡号ToolStripMenuItem.Text = "修改卡号";
+            this.修改卡号ToolStripMenuItem.Click += new System.EventHandler(this.修改卡号ToolStripMenuItem_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 590);
-            this.Controls.Add(this._Edit);
-            this.Controls.Add(this._Cancel);
-            this.Controls.Add(this._Save);
-            this.Controls.Add(this.Management_gb);
-            this.Controls.Add(this._Delete);
-            this.Controls.Add(this._New);
-            this.Controls.Add(this.query_gb);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.gbxHistory);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.gbxQuery);
             this.Controls.Add(this.dgv);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Medical Treatment";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
-            this.query_gb.ResumeLayout(false);
-            this.query_gb.PerformLayout();
+            this.gbxQuery.ResumeLayout(false);
+            this.gbxQuery.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
-            this.Management_gb.ResumeLayout(false);
-            this.Management_gb.PerformLayout();
+            this.gbxHistory.ResumeLayout(false);
+            this.gbxHistory.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox query_gb;
-        private System.Windows.Forms.DateTimePicker q_start_DTP;
-        private System.Windows.Forms.CheckBox q_time_CB;
-        private System.Windows.Forms.CheckBox q_medicineName_CB;
-        private System.Windows.Forms.CheckBox q_userNO_CB;
+        private System.Windows.Forms.GroupBox gbxQuery;
+        private System.Windows.Forms.DateTimePicker dtpStart;
+        private System.Windows.Forms.CheckBox chkTime;
+        private System.Windows.Forms.CheckBox chkMedicineName;
+        private System.Windows.Forms.CheckBox chkUserNO;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker q_end_DTP;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox q_medicineName_TB;
+        private System.Windows.Forms.TextBox txtMedicineName_Q;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox q_userNO_TB;
+        private System.Windows.Forms.TextBox txtUserNO_Q;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.GroupBox Management_gb;
+        private System.Windows.Forms.GroupBox gbxHistory;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -601,26 +647,30 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker validDate_TP;
-        private System.Windows.Forms.TextBox remark_TB;
-        private System.Windows.Forms.TextBox batchNumber_TB;
-        private System.Windows.Forms.TextBox singleUse_TB;
-        private System.Windows.Forms.TextBox outgoingQuantity_TB;
-        private System.Windows.Forms.TextBox doseDpecification_TB;
-        private System.Windows.Forms.TextBox medicineName_TB;
-        private System.Windows.Forms.TextBox userDept_TB;
-        private System.Windows.Forms.TextBox userSex_TB;
-        private System.Windows.Forms.TextBox userName_TB;
-        private System.Windows.Forms.TextBox userNO_TB;
-        private System.Windows.Forms.Button query_btn;
-        private System.Windows.Forms.TextBox cardID_TB;
+        private System.Windows.Forms.DateTimePicker dtpValidDate;
+        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.TextBox txtLot;
+        private System.Windows.Forms.TextBox txtSingleUse;
+        private System.Windows.Forms.TextBox txtQty;
+        private System.Windows.Forms.TextBox txtDosageSpecification;
+        private System.Windows.Forms.TextBox txtMedicineName;
+        private System.Windows.Forms.TextBox txtDept;
+        private System.Windows.Forms.TextBox txtSex;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtUserNO;
+        private System.Windows.Forms.Button btnQuery;
+        private System.Windows.Forms.TextBox txtCardID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox purpose_TB;
-        private System.Windows.Forms.Button _Edit;
-        private System.Windows.Forms.Button _Cancel;
-        private System.Windows.Forms.Button _Save;
-        private System.Windows.Forms.Button _Delete;
-        private System.Windows.Forms.Button _New;
+        private System.Windows.Forms.TextBox txtPurpose;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 卡号管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 添加卡号ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改卡号ToolStripMenuItem;
     }
 }
 

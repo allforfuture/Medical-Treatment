@@ -17,6 +17,7 @@ namespace Medical_Treatment
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
+            //Application.Run(new card.Card_Add());
         }
     }
 }

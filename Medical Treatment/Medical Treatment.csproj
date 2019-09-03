@@ -53,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="card\Card_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="card\Card_Add.Designer.cs">
+      <DependentUpon>Card_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="card\Card_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="card\Card_Update.Designer.cs">
+      <DependentUpon>Card_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBFactory.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -62,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="card\Card_Add.resx">
+      <DependentUpon>Card_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="card\Card_Update.resx">
+      <DependentUpon>Card_Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
