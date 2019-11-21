@@ -158,3 +158,16 @@ C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Debug\Medical Tre
 C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
 C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.card.Card_Add.resources
 C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Debug\Medical_Treatment.card.Card_Update.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe.config
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Debug\Medical Treatment.exe
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Debug\Medical Treatment.pdb
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical Treatment.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical_Treatment.card.Card_Add.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical_Treatment.card.Card_Update.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Main.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical_Treatment.Properties.Resources.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical Treatment.exe
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical Treatment.pdb
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Debug\Medical Treatment.csproj.CopyComplete

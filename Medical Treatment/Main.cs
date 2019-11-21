@@ -115,25 +115,13 @@ WHERE");
             bool isFirst = true;
             if (chkUserNO.Checked)
             {
-                //if (txtUserNO_Q.Text == "")
-                //{
-                //    MessageBox.Show("条件查询中，工号不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    return;
-                //}
-
                 if (!isFirst) { sql.Append(" AND "); }
-                sql.AppendLine(string.Format("m.user_no='{0}'", txtUserNO_Q.Text));
+                sql.AppendLine(string.Format("u.user_no='{0}'", txtUserNO_Q.Text));
                 isFirst = false;
             }
 
             if (chkMedicineName.Checked)
             {
-                //if (txtMedicineName_Q.Text == "")
-                //{
-                //    MessageBox.Show("条件查询中，药品名称不能为空", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    return;
-                //}
-
                 if (!isFirst) { sql.Append(" AND "); }
                 sql.AppendLine(string.Format("medicine_name~* '{0}'", txtMedicineName_Q.Text));
                 isFirst = false;

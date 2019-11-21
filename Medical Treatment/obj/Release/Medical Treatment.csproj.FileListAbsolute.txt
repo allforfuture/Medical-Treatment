@@ -82,3 +82,16 @@ C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Release\Medical T
 C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Release\Medical Treatment.csproj.CopyComplete
 C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Release\Medical Treatment.exe
 C:\Users\yyx19\Desktop\Medical Treatment\Medical Treatment\obj\Release\Medical Treatment.pdb
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Release\Medical Treatment.exe.config
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Release\Medical Treatment.exe
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Release\Medical Treatment.pdb
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\bin\Release\Mono.Security.dll
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical Treatment.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical_Treatment.card.Card_Add.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical_Treatment.card.Card_Update.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical_Treatment.Main.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical_Treatment.Properties.Resources.resources
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical Treatment.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical Treatment.csproj.CopyComplete
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical Treatment.exe
+C:\Users\yyx19\Desktop\Medical-Treatment\Medical Treatment\obj\Release\Medical Treatment.pdb
